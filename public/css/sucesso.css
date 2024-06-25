@@ -1,0 +1,21 @@
+section > h2{
+    margin-top: 50px;
+    margin-bottom: 28px;
+    font-size: 1.8em;
+    margin-left: 70px;
+    background-color: rgb(19, 129, 92);
+    color: aliceblue;
+    padding: 10px;
+    width: fit-content;
+}
+
+section > a{
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 25px;
+    margin-left: 70px;
+    color: white;
+    background-color: rgb(58, 58, 234);
+    padding: 8px 12px;
+    border-radius: 10px;
+}
