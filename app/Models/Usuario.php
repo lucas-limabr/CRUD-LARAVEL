@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Support\Facades\Config;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -68,5 +67,11 @@ class Usuario extends Model
         return $sql;
         //depuração e uso do método que recupera o comando sql gerado 
         //dd(DB::getQueryLog());
+    }
+
+    public static function deletar(Request $request)
+    {
+        //retorna 1 se conseguiu deletar um registro
+        return self::destroy($request->id);
     }
 }

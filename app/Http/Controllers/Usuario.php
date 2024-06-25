@@ -6,12 +6,14 @@ namespace App\Http\Controllers;
 use App\Models\Usuario as ModelsUsuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 class Usuario extends Controller
 {
     public function salvar(Request $request)
     {
-        //método da classe Request para fazer validação simples de campos de formulário
+        //método da classe Request para fazer validação simples de campos de formulário antes de passar para o BD
         $request->validate([
             "nome" => "required",
             "email" => "required|email|unique:usuario,email",
@@ -27,6 +29,29 @@ class Usuario extends Controller
             return view('usuario/sucesso', ["username" => $request->input('nome')]);
         } else {
             echo "<h3>Falha ao armazenar os dados, operação não concluída</h3>";
+        }
+    }
+
+    public function loadDeletar()
+    {
+        return view('usuario/deletar');
+    }
+    public function delete(Request $request)
+    {
+        //validação mais complexa utilizando a classe Validator
+        $validator = Validator::make($request->all(), [
+            'id' => 'required|exists:usuario,id', // Substitua your_table pelo nome da sua tabela
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('delete.form')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        // se o return for diferente de zero executa
+        if (ModelsUsuario::deletar($request)) {
+            return redirect()->route('delete.form')->with('successo', 'Deletado com sucesso!');
         }
     }
 }

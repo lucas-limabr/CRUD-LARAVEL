@@ -14,3 +14,7 @@ Route::get('/', function () {
 })->name('home');
 //posso apelidar a rota, se eu quiser, através do método estático name de Route
 Route::post('/salvar', [Usuario::class, 'salvar'])->name('save');
+
+Route::get('/deletar', [Usuario::class, 'loadDeletar'])->name('delete.form');
+
+Route::delete('/deletar', [Usuario::class, 'delete'])->name('delete');

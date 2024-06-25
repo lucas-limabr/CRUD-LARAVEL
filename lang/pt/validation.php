@@ -173,8 +173,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'id' => [
+            'required' => 'O campo ID é obrigatório.',
+            'exists' => 'O ID fornecido não existe na base de dados.',
         ],
     ],
 
