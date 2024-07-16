@@ -49,7 +49,7 @@ return [
     'distinct' => 'The :attribute field has a duplicate value.',
     'doesnt_end_with' => 'The :attribute field must not end with one of the following: :values.',
     'doesnt_start_with' => 'The :attribute field must not start with one of the following: :values.',
-    'email' => 'O campo :attribute deve ser um endereço de e-mail válido..',
+    'email' => 'O campo :attribute deve ser um endereço de e-mail válido.',
     'ends_with' => 'The :attribute field must end with one of the following: :values.',
     'enum' => 'The selected :attribute is invalid.',
     'exists' => 'The selected :attribute is invalid.',
@@ -176,7 +176,22 @@ return [
         'id' => [
             'required' => 'O campo ID é obrigatório.',
             'exists' => 'O ID fornecido não existe na base de dados.',
+            'required_without_all' => 'Pelo menos um campo deve ser selecionado.',
         ],
+        'nome' => [
+            'required_without_all' => 'Pelo menos um campo deve ser selecionado.',
+        ],
+        'email' => [
+            'required_without_all' => 'Pelo menos um campo deve ser selecionado.',
+        ],
+        'data' => [
+            'required_without_all' => 'Pelo menos um campo deve ser selecionado.',
+        ],
+        'qtd_registros' => [
+            'required' => 'A quantidade de registros é obrigatória.',
+            'integer' => 'A quantidade de registros deve ser um número inteiro.',
+            'min' => 'A quantidade de registros deve ser pelo menos 1.',
+        ]
     ],
 
     /*

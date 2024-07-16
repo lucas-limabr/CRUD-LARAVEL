@@ -3,9 +3,10 @@ section > h2{
     margin-bottom: 28px;
     font-size: 1.8em;
     margin-left: 70px;
-    background-color: rgb(19, 129, 92);
+    background-color: rgb(39, 154, 115);
     color: aliceblue;
     padding: 10px;
+    border-radius: 8px;
     width: fit-content;
 }
 

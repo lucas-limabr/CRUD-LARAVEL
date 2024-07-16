@@ -1,83 +1,55 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
+    background-color: rgb(235, 238, 240);
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
 main {
-    flex: 1; /* Vai empurrar o rodapé pro fundo  */
+    flex: 1;
+    /* Vai empurrar o rodapé pro fundo  */
 }
 
-header{
+header {
     background-color: #DFE2CF;
 }
 
-header > img{
+header img {
     width: 20%;
     margin: 16px 60px;
 }
 
-form{
-    padding: 35px 20px;
-}
-
-fieldset{
-    margin: 30px 70px;
-    background-color: #DCC48E;
-    width: 60%;
-    border: none;
-    border-radius: 4px;
-}
-
-legend{
-    margin-left: 30px;
-    color: rgba(11, 75, 42, 0.982) ;
-    font-size: 1.2em;
-    font-family: cursive;
-}
-
-#btn-form{
-    margin-top: 20px;
-}
-
-#btn-form > button{
-    margin-right: 6px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 16px;
-    font-size: 0.9em;
-    color: white;
-}
-
-#btn-form > button[type="submit"]{
-    background-color: rgb(103, 203, 103);
-}
-
-#btn-form > button[type="reset"]{
-    background-color: #808782;
-}
-
-form > p{
-    margin-bottom: 20px;
-}
-
-footer a{
+footer a {
     color: #DFE2CF;
 }
 
-footer{
+footer {
     background-color: rgb(35, 35, 36);
     padding: 12px 0px;
     color: white;
     text-align: center;
+}
+
+main > section > a[href="http://127.0.0.1:8000"] {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgb(58, 58, 234);
+    padding: 8px 12px;
+    border-radius: 10px;
+
 }

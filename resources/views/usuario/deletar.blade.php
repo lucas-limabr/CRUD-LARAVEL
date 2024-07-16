@@ -1,5 +1,8 @@
 @extends('layout/base')
 
+<link rel="stylesheet" href="{{asset('css/form.css')}}">
+<link rel="stylesheet" href="{{asset('css/deletar.css')}}">
+
 @section('title', 'Deletar registro')
 
 @section('conteudo')
@@ -35,11 +38,14 @@
         </form>
     </fieldset>
 
-    @if (session('successo'))
-        <p style="color: green; margin-left: 70px; font-size: 1.4em">{{ session('successo') }}</p>
-    @endif
+    <p id="feedback">
+        @if (session('successo'))
+            <p style="color: green; margin-left: 70px; font-size: 1.4em">{{ session('successo') }}</p>
+        @endif
+        @if (session('error'))
+            <p style="color: red; margin-left: 70px; font-size: 1.4em">{{ session('erro') }}</p>
+        @endif
+    </p>
 
-    @if (session('error'))
-        <p style="color: red; margin-left: 70px; font-size: 1.4em">{{ session('erro') }}</p>
-    @endif
+    <a href="{{ route('home') }}">Voltar</a>
 @endsection

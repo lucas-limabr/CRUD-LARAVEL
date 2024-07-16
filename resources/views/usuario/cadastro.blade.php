@@ -1,5 +1,7 @@
 @extends('layout/base')
 
+<link rel="stylesheet" href="{{asset('css/form.css')}}">
+
 @section('title', 'Cadastro de usuário')
 
 @section('conteudo')
@@ -51,4 +53,8 @@
             </div>
         </form>
     </fieldset>
+
+    <a href="{{ route('home') }}">Voltar</a>
 @endsection
+
+

@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <img src="{{ asset('/img/logo_dio.png') }}" alt="logo da dio">
+        <a href="{{ route('home') }}"><img src="{{ asset('/img/logo_dio.png') }}" alt="logo da dio"></a>
     </header>
 
     <main>
@@ -25,7 +25,8 @@
 
     <footer>
         <p>
-            Todos os direitos reservados &copy; -<a href="https://github.com/lucas-limabr" target="_blank"> Criado por Lucas Lima</a>
+            Todos os direitos reservados &copy; -<a href="https://github.com/lucas-limabr" target="_blank"> Criado por
+                Lucas Lima</a>
         </p>
     </footer>
 
